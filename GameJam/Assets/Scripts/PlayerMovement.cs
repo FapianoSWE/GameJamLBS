@@ -51,35 +51,20 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-        raydistance = 0.5f;
+        raydistance = 1;
         Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
 
         int lm = 1 << 8;
         lm = ~lm;
-        RaycastHit2D[] hit = { Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm),
-                               Physics2D.Raycast(transform.position + new Vector3(-0.5f, 0, 0), Vector2.down, raydistance, lm),
-                               Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector2.down, raydistance, lm)};
-        for (int i = 0; i < hit.Length; i++)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm);
+
+        if(hit.collider.gameObject.tag == "Terrain")
         {
-
-            if (hit[i].collider.gameObject.tag == "Terrain")
-            {
-                isGrounded = true;
-            }
-            print(Input.GetAxis("Vertical"));
-            if (isGrounded && Input.GetAxis("Vertical") <= -0.8f)
-            {
-                print(hit[i].transform.gameObject.GetComponent<PlatformEffector2D>());
-                if (hit[i].transform.gameObject.GetComponent<PlatformEffector2D>() != null)
-                {
-
-                    hit[i].collider.enabled = false;
-                    StartCoroutine(waitForFrame(hit[i].collider));
-                }
-            }
+            isGrounded = true;
         }
-
-    }
+            
+        
+	}
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -101,13 +86,5 @@ public class PlayerMovement : MonoBehaviour {
         currentVelocity = rb.velocity;
         transform.position = new Vector2(transform.position.x + (teleportRange * direction), transform.position.y);
         rb.velocity = currentVelocity;
-    }
-
-    IEnumerator waitForFrame(Collider2D collider)
-    {
-        yield return new WaitForSeconds(0.2f);
-        isGrounded = false;
-        yield return new WaitForSeconds(0.3f);
-        collider.enabled = true;
     }
 }
