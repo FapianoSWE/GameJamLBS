@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     //Physics
     public Rigidbody2D rb;
     BoxCollider2D collider;
-    RaycastHit hit;
+    float raydistance;
     
     //Teleport Variables
     Vector2 currentVelocity;
@@ -50,21 +50,19 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-        
-        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
+        raydistance = 1;
+        Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
 
-        if (Physics.Raycast(transform.position, Vector2.down, 1))
-        {
+        int lm = 1 << 8;
+        lm = ~lm;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm);
 
-        }
-        
-        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.6f))
+        if(hit.collider.gameObject.tag == "Terrain")
         {
-            if(hit.collider.gameObject.tag == "Terrain")
-            {
-                isGrounded = true;
-            }
+            isGrounded = true;
         }
+            
+        
 	}
     void Movement()
     {
