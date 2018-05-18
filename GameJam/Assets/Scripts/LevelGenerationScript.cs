@@ -9,6 +9,7 @@ public class LevelGenerationScript : MonoBehaviour {
     public int levelLength;
 
     void Start () {
+        GameObject map = new GameObject();
         int lastRoom = LevelModules.Count + 1;
         for (int i = 0; i<levelLength; i++)
         {
@@ -18,6 +19,7 @@ public class LevelGenerationScript : MonoBehaviour {
                 room = Random.Range(0, LevelModules.Count);
             }        
             GameObject Room = Instantiate(LevelModules[room], new Vector2(18*i,0), Quaternion.identity);
+            Room.transform.SetParent(map.transform);
             lastRoom = room;
         }	
 	}
