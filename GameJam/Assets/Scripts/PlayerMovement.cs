@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D rb;
     BoxCollider2D collider;
 
+    //Teleport Variables
+    Vector2 currentVelocity;
+    float cooldown;
+
 
 	void Start ()
     {
@@ -30,13 +34,19 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update ()
     {
-		if(Input.GetAxis("Left Trigger") == 1)
+		if(Input.GetAxis("Left Trigger") == 1 && cooldown == 0)
         {
             Teleport(-1);
+            cooldown = 5;
         }
-        else if(Input.GetAxis("Right Trigger") == 1)
+        else if(Input.GetAxis("Right Trigger") == 1 && cooldown == 0)
         {
             Teleport(1);
+            cooldown = 5;
+        }
+        if(cooldown > 0)
+        {
+            cooldown -= Time.deltaTime;
         }
 	}
     void Movement()
@@ -45,17 +55,19 @@ public class PlayerMovement : MonoBehaviour {
 
         if(horizontal < 0 || horizontal > 0)
         {
-            rb.AddForce(new Vector2(horizontal * speed, 0));
+            rb.AddForce(new Vector2(horizontal * speed * Time.deltaTime, 0));
         }
         if(Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(new Vector2(horizontal * speed, jumpForce));
+            rb.AddForce(new Vector2(horizontal * speed * Time.deltaTime, jumpForce));
         }
     }
 
     //Direction is 1 for right -1 for left
     void Teleport(float direction)
     {
+        currentVelocity = rb.velocity;
         transform.position = new Vector2(transform.position.x + teleportRange * direction, transform.position.y);
+        rb.velocity = currentVelocity;
     }
 }
