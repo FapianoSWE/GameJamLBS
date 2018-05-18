@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public bool isGrounded;
     public Vector2 moveDirection;
-
+    public float teleportRange;
 
     //Physics
     Rigidbody2D rb;
@@ -30,7 +30,14 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update ()
     {
-		
+		if(Input.GetAxis("Left Trigger") == 1)
+        {
+            Teleport(-1);
+        }
+        else if(Input.GetAxis("Right Trigger") == 1)
+        {
+            Teleport(1);
+        }
 	}
     void Movement()
     {
@@ -44,5 +51,11 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.AddForce(new Vector2(horizontal * speed, jumpForce));
         }
+    }
+
+    //Direction is 1 for right -1 for left
+    void Teleport(float direction)
+    {
+        transform.position = new Vector2(transform.position.x + teleportRange * direction, transform.position.y);
     }
 }
