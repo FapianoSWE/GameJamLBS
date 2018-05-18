@@ -33,31 +33,26 @@ public class PlayerMovement : MonoBehaviour {
         Movement();
     }
 
-    void Update ()
+    void Update()
     {
-		if(Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
+        if (Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
             Teleport(-1);
             cooldown = 5;
         }
-        else if(Input.GetAxis("RightTrigger") == 1 && cooldown <= 0)
+        else if (Input.GetAxis("RightTrigger") == 1 && cooldown <= 0)
         {
             Teleport(1);
             cooldown = 5;
         }
 
-        if(cooldown > -1)
+        if (cooldown > -1)
         {
             cooldown -= Time.deltaTime;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
-=======
+
         raydistance = 0.5f;
         Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
->>>>>>> parent of 1759972... Revert "Merge branch 'master' of https://github.com/FapianoSWE/GameJamLBS"
 
         int lm = 1 << 8;
         lm = ~lm;
@@ -83,27 +78,8 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
         }
-<<<<<<< HEAD
-=======
-        raydistance = 1;
-        Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
 
-        int lm = 1 << 8;
-        lm = ~lm;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm);
-
-        if(hit.collider.gameObject.tag == "Terrain")
-        {
-            isGrounded = true;
-        }
-            
-        
->>>>>>> 031b235bb4afd89e80b90d7ff1afd6b566122c63
-	}
-=======
-
-    }
->>>>>>> parent of 1759972... Revert "Merge branch 'master' of https://github.com/FapianoSWE/GameJamLBS"
+    } 
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
