@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Terrain
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,12 +14,17 @@ TagManager:
   - 
   - 
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Bullet
   - Player
 =======
   - Player
   - Bullet
 >>>>>>> 4d2b33453486c2922fe669ed333ae72d94ca65f8
+=======
+  - 
+  - 
+>>>>>>> parent of 6cbc811... uggo booggoo
   - 
   - 
   - 
