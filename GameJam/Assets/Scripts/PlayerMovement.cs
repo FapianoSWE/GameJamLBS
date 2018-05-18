@@ -49,8 +49,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-        Debug.Log(cooldown);
-
 	}
     void Movement()
     {
