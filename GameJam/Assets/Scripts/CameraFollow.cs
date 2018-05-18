@@ -6,12 +6,14 @@ public class CameraFollow : MonoBehaviour {
 
     public Transform target;
 
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -5);
 	}
 }
