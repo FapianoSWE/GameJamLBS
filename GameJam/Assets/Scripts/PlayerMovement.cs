@@ -50,12 +50,15 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
+<<<<<<< HEAD
+=======
 
         if(Physics.Raycast(transform.position, Vector2.down, 0.5f))
         {
 
         }
 
+>>>>>>> afc62f57be27bae0f585eb5b8f967f1348ece40d
 	}
     void Movement()
     {
