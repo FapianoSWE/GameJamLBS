@@ -50,15 +50,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-<<<<<<< HEAD
-=======
 
-        if(Physics.Raycast(transform.position, Vector2.down, 0.5f))
+        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.6f))
         {
-
+            if(hit.collider.gameObject.tag == "Terrain")
+            {
+                isGrounded = true;
+            }
         }
-
->>>>>>> afc62f57be27bae0f585eb5b8f967f1348ece40d
 	}
     void Movement()
     {
@@ -68,9 +67,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.AddForce(new Vector2(horizontal * speed * Time.deltaTime, 0));
         }
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(new Vector2(horizontal * speed * Time.deltaTime, jumpForce));
+            isGrounded = false;
         }
     }
 
