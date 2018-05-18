@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour {
             cooldown -= Time.deltaTime;
         }
 
-        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.6f))
+        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
         {
             if(hit.collider.gameObject.tag == "Terrain")
             {
