@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour {
     //Physics
     public Rigidbody2D rb;
     BoxCollider2D collider;
-
+    RaycastHit hit;
+    
     //Teleport Variables
     Vector2 currentVelocity;
     float cooldown;
@@ -49,6 +50,12 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
+<<<<<<< HEAD
+=======
+
+        if(Physics.Raycast(transform.position, Vector2.down, )
+
+>>>>>>> afc62f57be27bae0f585eb5b8f967f1348ece40d
 	}
     void Movement()
     {

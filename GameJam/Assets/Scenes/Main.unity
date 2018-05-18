@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 411844263}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d144d15b2cf449aba510c683cd3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6000
-  jumpForce: 1000
+  speed: 2000
+  jumpForce: 500
   isGrounded: 0
   moveDirection: {x: 0, y: 0}
   teleportRange: 5
