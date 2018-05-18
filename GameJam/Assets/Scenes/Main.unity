@@ -112,48 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &120093177
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.2219769
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483538547939592, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7dad2e0951fd1694c9fe147a4e44867d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &411844262
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +124,7 @@ GameObject:
   - component: {fileID: 411844266}
   - component: {fileID: 411844263}
   - component: {fileID: 411844267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -249,6 +207,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   teleportRange: 5
   rb: {fileID: 0}
+  cooldownTime: 0
 --- !u!114 &411844267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +232,7 @@ GameObject:
   - component: {fileID: 711900679}
   - component: {fileID: 711900681}
   - component: {fileID: 711900680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
