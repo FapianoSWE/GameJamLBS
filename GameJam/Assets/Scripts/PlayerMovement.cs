@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     public float teleportRange;
 
     //Physics
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     BoxCollider2D collider;
 
     //Teleport Variables

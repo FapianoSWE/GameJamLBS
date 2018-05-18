@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 1051971572}
   - component: {fileID: 1051971574}
   - component: {fileID: 1051971573}
+  - component: {fileID: 1051971575}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -856,6 +857,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1051971575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051971571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71ab68468372dd418ab0e760db74bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addDistance: {x: -1.1, y: -1}
+  connectedDoor: {fileID: 1522772307}
 --- !u!1 &1282306446
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +880,7 @@ GameObject:
   - component: {fileID: 1282306447}
   - component: {fileID: 1282306449}
   - component: {fileID: 1282306448}
+  - component: {fileID: 1282306450}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -955,6 +970,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1282306450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282306446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71ab68468372dd418ab0e760db74bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addDistance: {x: 1.1, y: -1}
+  connectedDoor: {fileID: 2048541599}
 --- !u!1 &1522772306
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +993,7 @@ GameObject:
   - component: {fileID: 1522772307}
   - component: {fileID: 1522772309}
   - component: {fileID: 1522772308}
+  - component: {fileID: 1522772310}
   m_Layer: 0
   m_Name: UGDoor2
   m_TagString: Untagged
@@ -1054,6 +1083,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1522772310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522772306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71ab68468372dd418ab0e760db74bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addDistance: {x: 1.1, y: -1}
+  connectedDoor: {fileID: 1051971572}
 --- !u!1 &1588995965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,8 +1118,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588995965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55314344, y: -16.386374, z: -0.18424949}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5075919, y: -2.5482967, z: -0.18424949}
+  m_LocalScale: {x: 0.14285713, y: 0.125, z: 1}
   m_Children:
   - {fileID: 446833032}
   - {fileID: 245636214}
@@ -1085,8 +1127,8 @@ Transform:
   - {fileID: 1019157996}
   - {fileID: 65207833}
   - {fileID: 588145118}
-  m_Father: {fileID: 567963310}
-  m_RootOrder: 1
+  m_Father: {fileID: 1690361135}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593085695
 GameObject:
@@ -1218,8 +1260,9 @@ Transform:
   - {fileID: 1051971572}
   - {fileID: 1522772307}
   - {fileID: 2048541599}
+  - {fileID: 1588995966}
   m_Father: {fileID: 567963310}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1690361136
 BoxCollider2D:
@@ -1300,6 +1343,7 @@ GameObject:
   - component: {fileID: 2048541599}
   - component: {fileID: 2048541601}
   - component: {fileID: 2048541600}
+  - component: {fileID: 2048541602}
   m_Layer: 0
   m_Name: UGDoor1
   m_TagString: Untagged
@@ -1389,3 +1433,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &2048541602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048541598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71ab68468372dd418ab0e760db74bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addDistance: {x: -1.1, y: -1}
+  connectedDoor: {fileID: 1282306447}
