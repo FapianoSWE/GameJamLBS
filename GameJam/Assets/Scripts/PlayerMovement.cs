@@ -18,8 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     
     //Teleport Variables
     Vector2 currentVelocity;
-    float cooldown; 
-    public float cooldownTime;
+    float cooldown;
 
 
 	void Start ()
@@ -39,18 +38,19 @@ public class PlayerMovement : MonoBehaviour {
 		if(Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
             Teleport(-1);
-            cooldown = cooldownTime;
+            cooldown = 5;
         }
         else if(Input.GetAxis("RightTrigger") == 1 && cooldown <= 0)
         {
             Teleport(1);
-            cooldown = cooldownTime;
+            cooldown = 5;
         }
 
         if(cooldown > -1)
         {
             cooldown -= Time.deltaTime;
         }
+<<<<<<< HEAD
         
         if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
 
@@ -66,6 +66,21 @@ public class PlayerMovement : MonoBehaviour {
                 isGrounded = true;
             }
         }
+=======
+        raydistance = 1;
+        Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
+
+        int lm = 1 << 8;
+        lm = ~lm;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm);
+
+        if(hit.collider.gameObject.tag == "Terrain")
+        {
+            isGrounded = true;
+        }
+            
+        
+>>>>>>> 031b235bb4afd89e80b90d7ff1afd6b566122c63
 	}
     void Movement()
     {
