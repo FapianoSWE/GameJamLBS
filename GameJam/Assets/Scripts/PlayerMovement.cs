@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     //Physics
     public Rigidbody2D rb;
     BoxCollider2D collider;
-    RaycastHit hit;
+    float raydistance;
     
     //Teleport Variables
     Vector2 currentVelocity;
@@ -51,21 +51,39 @@ public class PlayerMovement : MonoBehaviour {
             cooldown -= Time.deltaTime;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
+=======
+        raydistance = 0.5f;
+        Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
+>>>>>>> parent of 1759972... Revert "Merge branch 'master' of https://github.com/FapianoSWE/GameJamLBS"
 
-        if (Physics.Raycast(transform.position, Vector2.down, 1))
+        int lm = 1 << 8;
+        lm = ~lm;
+        RaycastHit2D[] hit = { Physics2D.Raycast(transform.position, Vector2.down, raydistance, lm),
+                               Physics2D.Raycast(transform.position + new Vector3(-0.5f, 0, 0), Vector2.down, raydistance, lm),
+                               Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector2.down, raydistance, lm)};
+        for (int i = 0; i < hit.Length; i++)
         {
 
-        }
-        
-        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.6f))
-        {
-            if(hit.collider.gameObject.tag == "Terrain")
+            if (hit[i].collider.gameObject.tag == "Terrain")
             {
                 isGrounded = true;
             }
+            print(Input.GetAxis("Vertical"));
+            if (isGrounded && Input.GetAxis("Vertical") <= -0.8f)
+            {
+                print(hit[i].transform.gameObject.GetComponent<PlatformEffector2D>());
+                if (hit[i].transform.gameObject.GetComponent<PlatformEffector2D>() != null)
+                {
+
+                    hit[i].collider.enabled = false;
+                    StartCoroutine(waitForFrame(hit[i].collider));
+                }
+            }
         }
+<<<<<<< HEAD
 =======
         raydistance = 1;
         Debug.DrawRay(transform.position, Vector2.down * raydistance, Color.black);
@@ -82,6 +100,10 @@ public class PlayerMovement : MonoBehaviour {
         
 >>>>>>> 031b235bb4afd89e80b90d7ff1afd6b566122c63
 	}
+=======
+
+    }
+>>>>>>> parent of 1759972... Revert "Merge branch 'master' of https://github.com/FapianoSWE/GameJamLBS"
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -103,5 +125,13 @@ public class PlayerMovement : MonoBehaviour {
         currentVelocity = rb.velocity;
         transform.position = new Vector2(transform.position.x + (teleportRange * direction), transform.position.y);
         rb.velocity = currentVelocity;
+    }
+
+    IEnumerator waitForFrame(Collider2D collider)
+    {
+        yield return new WaitForSeconds(0.2f);
+        isGrounded = false;
+        yield return new WaitForSeconds(0.3f);
+        collider.enabled = true;
     }
 }
