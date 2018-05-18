@@ -34,20 +34,23 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update ()
     {
-		if(Input.GetAxis("Left Trigger") == 1 && cooldown == 0)
+		if(Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
             Teleport(-1);
             cooldown = 5;
         }
-        else if(Input.GetAxis("Right Trigger") == 1 && cooldown == 0)
+        else if(Input.GetAxis("RightTrigger") == 1 && cooldown <= 0)
         {
             Teleport(1);
             cooldown = 5;
         }
-        if(cooldown > 0)
+
+        if(cooldown > -1)
         {
             cooldown -= Time.deltaTime;
         }
+        Debug.Log(cooldown);
+
 	}
     void Movement()
     {
@@ -67,7 +70,7 @@ public class PlayerMovement : MonoBehaviour {
     void Teleport(float direction)
     {
         currentVelocity = rb.velocity;
-        transform.position = new Vector2(transform.position.x + teleportRange * direction, transform.position.y);
+        transform.position = new Vector2(transform.position.x + (teleportRange * direction), transform.position.y);
         rb.velocity = currentVelocity;
     }
 }
