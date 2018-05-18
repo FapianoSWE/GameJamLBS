@@ -50,15 +50,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             cooldown -= Time.deltaTime;
         }
-
-<<<<<<< HEAD
+        
+        if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.8f))
 
         if (Physics.Raycast(transform.position, Vector2.down, 1))
         {
 
         }
-
-=======
+        
         if(Physics.Raycast(transform.position, Vector2.down, out hit, 0.6f))
         {
             if(hit.collider.gameObject.tag == "Terrain")
@@ -66,7 +65,6 @@ public class PlayerMovement : MonoBehaviour {
                 isGrounded = true;
             }
         }
->>>>>>> 91edc83ab9babca3a2b9cdc0c1520bfc623aad60
 	}
     void Movement()
     {
