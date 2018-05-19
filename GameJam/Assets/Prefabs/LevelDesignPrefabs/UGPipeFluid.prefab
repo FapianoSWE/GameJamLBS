@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61699393825056872}
   - component: {fileID: 251092542529072460}
   m_Layer: 0
-  m_Name: UGPipe
+  m_Name: UGPipeFluid
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
