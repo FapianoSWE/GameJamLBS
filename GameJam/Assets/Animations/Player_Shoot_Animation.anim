@@ -590,12 +590,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Left_Arm_Top/Left_Arm_Bot/Left_Hand
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_PositionCurves: []
-=======
-=======
->>>>>>> parent of 18b701c... char_anim
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -622,10 +617,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: 
-<<<<<<< HEAD
->>>>>>> parent of 18b701c... char_anim
-=======
->>>>>>> parent of 18b701c... char_anim
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -2604,8 +2595,8 @@ AnimationClip:
     path: Left_Arm_Top/Left_Arm_Bot/Left_Hand
     classID: 4
     script: {fileID: 0}
-<<<<<<< HEAD
-=======
+
+
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2690,7 +2681,6 @@ AnimationClip:
     path: 
     classID: 4
     script: {fileID: 0}
->>>>>>> parent of 18b701c... char_anim
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
