@@ -47,7 +47,7 @@ public class PlayerStats : MonoBehaviour {
             cooldownUIElements[0].GetComponent<Image>().fillAmount = 1f;
             canSetFill = false;
         }
-        cooldownUIElements[0].GetComponent<Image>().fillAmount = cooldownUIElements[0].GetComponent<Image>().fillAmount - (1 / 3) * Time.deltaTime;
+        cooldownUIElements[0].GetComponent<Image>().fillAmount = cooldownUIElements[0].GetComponent<Image>().fillAmount - (0.33f * Time.deltaTime);
     }
 
 
@@ -93,5 +93,14 @@ public class PlayerStats : MonoBehaviour {
             health = 3;
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D c)
+    {
+        if(c.gameObject.tag == "Coin")
+        {
+            coins += 1;
+            Destroy(c.gameObject);
+        }
     }
 }
