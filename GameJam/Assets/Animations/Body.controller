@@ -37,8 +37,13 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ExitTime: 0.9285712
   m_HasExitTime: 0
+=======
+  m_ExitTime: 0.78125
+  m_HasExitTime: 1
+>>>>>>> parent of 18b701c... char_anim
 =======
   m_ExitTime: 0.78125
   m_HasExitTime: 1
@@ -68,6 +73,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1101 &1101218892474249396
 AnimatorStateTransition:
@@ -199,6 +205,9 @@ AnimatorStateTransition:
 =======
 --- !u!1101 &1101218784571949960
 >>>>>>> parent of 18b701c... char_anim
+=======
+--- !u!1101 &1101218784571949960
+>>>>>>> parent of 18b701c... char_anim
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -206,6 +215,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_DstState: {fileID: 1102052598374887360}
   m_Solo: 0
@@ -261,6 +271,8 @@ AnimatorStateTransition:
     m_ConditionEvent: Shoot
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
+=======
+>>>>>>> parent of 18b701c... char_anim
 =======
 >>>>>>> parent of 18b701c... char_anim
   m_DstState: {fileID: 1102492568360078294}
@@ -452,6 +464,7 @@ AnimatorState:
   m_TimeParameter: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1102 &1102884461421671344
 AnimatorState:
 =======
@@ -523,6 +536,8 @@ AnimatorState:
 >>>>>>> 377c4e868a25c5bcc4ce0ee8f1c7423bc420f08e
 =======
 >>>>>>> parent of 18b701c... char_anim
+=======
+>>>>>>> parent of 18b701c... char_anim
 --- !u!1107 &1107331205082073222
 AnimatorStateMachine:
   serializedVersion: 5
@@ -539,6 +554,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 144, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102052598374887360}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Position: {x: 564, y: 72, z: 0}
@@ -560,6 +576,9 @@ AnimatorStateMachine:
 =======
     m_Position: {x: 588, y: 48, z: 0}
 >>>>>>> 377c4e868a25c5bcc4ce0ee8f1c7423bc420f08e
+=======
+    m_Position: {x: 564, y: 72, z: 0}
+>>>>>>> parent of 18b701c... char_anim
 =======
     m_Position: {x: 564, y: 72, z: 0}
 >>>>>>> parent of 18b701c... char_anim

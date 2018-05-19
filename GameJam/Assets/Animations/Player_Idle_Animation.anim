@@ -445,6 +445,7 @@ AnimationClip:
     path: Left_Arm_Top/Left_Arm_Bot
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -486,6 +487,8 @@ AnimationClip:
     path: Left_Leg_Top/Left_Leg_Bot
 =======
 >>>>>>> parent of 18b701c... char_anim
+=======
+>>>>>>> parent of 18b701c... char_anim
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -507,9 +510,12 @@ AnimationClip:
       m_RotationOrder: 4
     path: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_PositionCurves: []
 >>>>>>> 377c4e868a25c5bcc4ce0ee8f1c7423bc420f08e
+=======
+>>>>>>> parent of 18b701c... char_anim
 =======
 >>>>>>> parent of 18b701c... char_anim
   m_ScaleCurves: []

@@ -113,6 +113,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &64770725
 Prefab:
   m_ObjectHideFlags: 0
@@ -156,11 +157,16 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: d812663e9199d7543927c13a6955fffb, type: 2}
   m_IsPrefabParent: 0
 =======
+=======
+>>>>>>> parent of 18b701c... char_anim
 --- !u!4 &1019104689 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4413221989370846, guid: 4a70474fabf626a41a953ed209fdc002,
     type: 2}
   m_PrefabInternal: {fileID: 1487299970}
+<<<<<<< HEAD
+>>>>>>> parent of 18b701c... char_anim
+=======
 >>>>>>> parent of 18b701c... char_anim
 --- !u!1001 &1319751173
 Prefab:
@@ -209,7 +215,10 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: cd032ca5100253842ad81b671387cbfb, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 18b701c... char_anim
 --- !u!1001 &1487299970
 Prefab:
   m_ObjectHideFlags: 0
@@ -282,6 +291,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a70474fabf626a41a953ed209fdc002, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
+>>>>>>> parent of 18b701c... char_anim
+=======
 >>>>>>> parent of 18b701c... char_anim
 --- !u!1 &1574663635 stripped
 GameObject:
@@ -300,12 +312,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   target: {fileID: 1719056102}
 --- !u!4 &1719056102 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4455606225563886, guid: d812663e9199d7543927c13a6955fffb,
     type: 2}
   m_PrefabInternal: {fileID: 64770725}
+=======
+  target: {fileID: 1019104689}
+>>>>>>> parent of 18b701c... char_anim
 =======
   target: {fileID: 1019104689}
 >>>>>>> parent of 18b701c... char_anim
