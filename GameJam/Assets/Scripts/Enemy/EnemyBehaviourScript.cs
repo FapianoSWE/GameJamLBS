@@ -13,12 +13,12 @@ public class EnemyBehaviourScript : MonoBehaviour {
     public EnemyState currentState = EnemyState.patrolling;
 
     //Patrol Related Variables
-    public Transform patrol1, patrol2;
+    public Transform patrol1, patrol2, gunPos, particlePos;
     Transform patrolTarget;
 
     //Public Variables
     public float accelerationSpeed, maxSpeed, attackRate, shotSpeed;
-    public GameObject projectile;
+    public GameObject projectile, deathParticle;
     public int health;
 
     //Local Variables
@@ -68,8 +68,8 @@ public class EnemyBehaviourScript : MonoBehaviour {
                 attackTimer += Time.deltaTime;
                 if (attackTimer >= attackRate)
                 {
-                    GameObject bullet = Instantiate(projectile, (Vector2)transform.position - new Vector2(0.5f, 0.5f), Quaternion.identity);
-                    Vector2 directionVector = player.transform.position - transform.position;
+                    GameObject bullet = Instantiate(projectile, gunPos.position, Quaternion.identity);
+                    Vector2 directionVector = player.transform.position - gunPos.position;
                     directionVector.Normalize();
 
                     bullet.GetComponent<BulletScript>().velocity = directionVector * shotSpeed;
@@ -77,6 +77,12 @@ public class EnemyBehaviourScript : MonoBehaviour {
                     attackTimer = 0;
                 }
             }
+        }
+        else
+        {
+            GameObject part = Instantiate(deathParticle, transform.position, Quaternion.identity);
+            Destroy(part, 5);
+            Destroy(gameObject,0);
         }
     }      
 

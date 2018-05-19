@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     //Teleport Variables
     Vector2 currentVelocity;
     public float cooldown;
+    public GameObject tpParticle;
 
     public Animator anim;
 
@@ -27,11 +28,6 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
 	}
-
-    void FixedUpdate()
-    {
-        
-    }
 
     void Update()
     {
@@ -138,7 +134,14 @@ public class PlayerMovement : MonoBehaviour {
     //Direction is 1 for right -1 for left
     void Teleport(float direction)
     {
+        GameObject p1 = Instantiate(tpParticle, transform.position, Quaternion.identity);
+        
         transform.position = new Vector2(transform.position.x + (teleportRange * direction), transform.position.y);
+
+        GameObject p2 = Instantiate(tpParticle, transform.position, Quaternion.identity);
+
+        Destroy(p1, 0.5f);
+        Destroy(p2, 0.5f);
     }
 
     IEnumerator waitForFrame(Collider2D collider)
