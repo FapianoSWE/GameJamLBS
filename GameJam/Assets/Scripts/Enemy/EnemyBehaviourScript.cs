@@ -19,6 +19,7 @@ public class EnemyBehaviourScript : MonoBehaviour {
     //Public Variables
     public float accelerationSpeed, maxSpeed, attackRate, shotSpeed;
     public GameObject projectile;
+    public int health;
 
     //Local Variables
     float attackTimer;
@@ -33,49 +34,52 @@ public class EnemyBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if (currentState == EnemyState.patrolling)
+        if (health > 0)
         {
-            #region Patrolling
-            if (patrolTarget.position.x > transform.position.x)
+            if (currentState == EnemyState.patrolling)
             {
-                if (rb.velocity.x < maxSpeed)
+                #region Patrolling
+                if (patrolTarget.position.x > transform.position.x)
                 {
-                    rb.AddForce(new Vector2(accelerationSpeed, 0));
+                    if (rb.velocity.x < maxSpeed)
+                    {
+                        rb.AddForce(new Vector2(accelerationSpeed, 0));
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
+                    }
                 }
                 else
                 {
-                    rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
-                }              
-            }
-            else
-            {
-                if (rb.velocity.x > -maxSpeed)
-                {
-                    rb.AddForce(new Vector2(-accelerationSpeed, 0));
+                    if (rb.velocity.x > -maxSpeed)
+                    {
+                        rb.AddForce(new Vector2(-accelerationSpeed, 0));
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
+                    }
                 }
-                else
-                {
-                    rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
-                }
+                #endregion
             }
-            #endregion
-        }
-        else if(currentState == EnemyState.aggressive)
-        {
-            attackTimer += Time.deltaTime;
-            if (attackTimer >= attackRate)
+            else if (currentState == EnemyState.aggressive)
             {
-                GameObject bullet = Instantiate(projectile, (Vector2)transform.position - new Vector2(0.5f, 0.5f), Quaternion.identity);
-                Vector2 directionVector = player.transform.position - transform.position;
-                directionVector.Normalize();
+                attackTimer += Time.deltaTime;
+                if (attackTimer >= attackRate)
+                {
+                    GameObject bullet = Instantiate(projectile, (Vector2)transform.position - new Vector2(0.5f, 0.5f), Quaternion.identity);
+                    Vector2 directionVector = player.transform.position - transform.position;
+                    directionVector.Normalize();
 
-                bullet.GetComponent<BulletScript>().velocity = directionVector * shotSpeed;
+                    bullet.GetComponent<BulletScript>().velocity = directionVector * shotSpeed;
 
-                attackTimer = 0;
+                    attackTimer = 0;
+                }
             }
         }
-    }
+    }      
+
 
     void OnTriggerEnter2D(Collider2D col)
     {

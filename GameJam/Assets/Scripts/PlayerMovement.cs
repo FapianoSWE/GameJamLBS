@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.velocity = new Vector2(rb.velocity.x, maxUpVelocity);
         }
+        anim.SetFloat("VericalVelocity", rb.velocity.y);
 
         if (Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
@@ -69,10 +70,8 @@ public class PlayerMovement : MonoBehaviour {
             rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
             if (rb.velocity.x > -maxSpeed)
             {
-                transform.localScale = new Vector3(-1,1,1);
-              
+                transform.localScale = new Vector3(-1,1,1);    
             }
-          
         }
         else if (horizontal > 0)
         {
@@ -90,6 +89,8 @@ public class PlayerMovement : MonoBehaviour {
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
+            anim.SetBool("Jumping", true);
+            StartCoroutine("ResetJumpBool");
             isGrounded = false;
             rb.velocity += new Vector2(0, jumpForce  * 1000 * Time.deltaTime);
         }
@@ -146,5 +147,10 @@ public class PlayerMovement : MonoBehaviour {
         isGrounded = false;
         yield return new WaitForSeconds(0.3f);
         collider.enabled = true;
+    }
+    IEnumerator ResetJumpBool()
+    {
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("Jumping", false);
     }
 }

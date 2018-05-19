@@ -20,7 +20,11 @@ public class BulletScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
+        print(col.gameObject.layer);
+        if (col.gameObject.layer == 11)
+        {
+            col.gameObject.GetComponent<EnemyBehaviourScript>().health -= 1;
+        }
         Destroy(gameObject,0f);
     }
 }
