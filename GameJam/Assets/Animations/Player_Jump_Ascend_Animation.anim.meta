@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GameJam/Assets/Animations/Player_Jump_Ascend_Animation.anim.meta
 guid: 96335c7cc5663e24bb2a15849912c76f
 timeCreated: 1526725871
 licenseType: Free
 NativeFormatImporter:
+=======
+guid: b8ecc2132dd3b6041bef9bd4421b43ee
+folderAsset: yes
+DefaultImporter:
+>>>>>>> cd3dcaae2815922e763c326796f02d957509d391:GameJam/Assets/Scripts/Player.meta
   externalObjects: {}
   mainObjectFileID: 7400000
   userData: 
