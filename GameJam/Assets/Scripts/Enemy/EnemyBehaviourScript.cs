@@ -20,6 +20,7 @@ public class EnemyBehaviourScript : MonoBehaviour {
     public float accelerationSpeed, maxSpeed, attackRate, shotSpeed;
     public GameObject projectile, deathParticle;
     public int health;
+    public AudioClip deathSound;
 
     //Local Variables
     float attackTimer;
@@ -84,6 +85,7 @@ public class EnemyBehaviourScript : MonoBehaviour {
         }
         else
         {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
             GameObject part = Instantiate(deathParticle, transform.position, Quaternion.identity);
             Destroy(part, 5);
             GameObject temp = Instantiate(coin, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);

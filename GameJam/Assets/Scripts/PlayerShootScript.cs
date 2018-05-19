@@ -6,8 +6,10 @@ public class PlayerShootScript : MonoBehaviour {
 
     public float bulletVelocity;
     public GameObject bulletPrefab;
+    public AudioSource shotSound;
     GameObject bullets;
     public Animator anim;
+    float timer;
 
     void start()
     {
@@ -16,12 +18,15 @@ public class PlayerShootScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire2"))
+        timer += Time.deltaTime;
+        if (Input.GetButton("Fire2") && timer >= 1f)
         {
             GameObject bullet = Instantiate(bulletPrefab,transform.position,transform.rotation);
             bullet.GetComponent<BulletScript>().velocity = new Vector2(bulletVelocity * transform.localScale.x, 0);
             anim.SetBool("Shooting",true);
             StartCoroutine("ResetBool");
+            shotSound.Play();
+            timer = 0;
         }
 	}
 

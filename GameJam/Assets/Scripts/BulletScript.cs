@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
 
-
+    
     public Vector2 velocity;
     public float lifeTime;
 
@@ -24,6 +24,10 @@ public class BulletScript : MonoBehaviour {
         if (col.gameObject.layer == 11)
         {
             col.gameObject.GetComponent<EnemyBehaviourScript>().health -= 1;
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerStats>
         }
         Destroy(gameObject,0f);
     }
