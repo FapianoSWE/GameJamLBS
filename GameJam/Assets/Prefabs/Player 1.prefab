@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114743385203207872}
   - component: {fileID: 61049684198643586}
   - component: {fileID: 114744615600349482}
+  - component: {fileID: 114286712397097054}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -606,6 +607,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114286712397097054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187977143493730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918a1a61d5268bc4f819a2ed91b6a4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cooldownUIElements:
+  - {fileID: 0}
+  - {fileID: 0}
+  health: 3
+  isDead: 0
+  coins: 0
+  coinAmount: {fileID: 0}
 --- !u!114 &114743385203207872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -628,6 +651,8 @@ MonoBehaviour:
   teleportRange: 5
   rb: {fileID: 50729504439557018}
   raydistance: 1.21
+  cooldown: 3
+  anim: {fileID: 95051344234981452}
 --- !u!114 &114744615600349482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -642,6 +667,7 @@ MonoBehaviour:
   bulletVelocity: 15
   bulletPrefab: {fileID: 1287574637407994, guid: 7dad2e0951fd1694c9fe147a4e44867d,
     type: 2}
+  anim: {fileID: 0}
 --- !u!212 &212054381495045978
 SpriteRenderer:
   m_ObjectHideFlags: 1

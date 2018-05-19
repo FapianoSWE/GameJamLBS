@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     
     //Teleport Variables
     Vector2 currentVelocity;
-    float cooldown;
+    public float cooldown;
 
     public Animator anim;
 
@@ -46,12 +46,12 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
             Teleport(-1);
-            cooldown = 5;
+            cooldown = 3;
         }
         else if (Input.GetAxis("RightTrigger") == 1 && cooldown <= 0)
         {
             Teleport(1);
-            cooldown = 5;
+            cooldown = 3;
         }
 
         if (cooldown > -1)
