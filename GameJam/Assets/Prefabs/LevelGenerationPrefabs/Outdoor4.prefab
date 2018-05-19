@@ -382,10 +382,14 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 18.866844, y: -28.390882, z: 0}
 =======
   m_LocalPosition: {x: 23.788525, y: -3.8319974, z: 0}
 >>>>>>> b85bfdf2d0517a1872ca9bce4f6a44ef3591731a
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 8a622af... Enviroment
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 8a622af... Enviroment
@@ -424,7 +428,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 8a622af... Enviroment
 =======
 >>>>>>> parent of 8a622af... Enviroment
 --- !u!4 &4679579017488564
@@ -435,7 +442,11 @@ Transform:
   m_GameObject: {fileID: 1271676519833270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.420003, y: -5.7816296, z: 0.18424949}
+=======
+  m_LocalPosition: {x: 3.4468567, y: -5.6136265, z: 0.18424949}
+>>>>>>> parent of 8a622af... Enviroment
 =======
   m_LocalPosition: {x: 3.4468567, y: -5.6136265, z: 0.18424949}
 >>>>>>> parent of 8a622af... Enviroment
@@ -445,7 +456,10 @@ Transform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b85bfdf2d0517a1872ca9bce4f6a44ef3591731a
+=======
+>>>>>>> parent of 8a622af... Enviroment
 =======
 >>>>>>> parent of 8a622af... Enviroment
 --- !u!4 &4690638554304068
@@ -1117,11 +1131,16 @@ SpriteRenderer:
   m_SortingLayer: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_SortingOrder: 0
 =======
   m_SortingOrder: 1
 >>>>>>> b85bfdf2d0517a1872ca9bce4f6a44ef3591731a
   m_Sprite: {fileID: 21300000, guid: 25f740c0f63cc0640b835bdb8811129b, type: 3}
+=======
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 3aeb669a393f821458145dab1100341e, type: 3}
+>>>>>>> parent of 8a622af... Enviroment
 =======
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3aeb669a393f821458145dab1100341e, type: 3}
