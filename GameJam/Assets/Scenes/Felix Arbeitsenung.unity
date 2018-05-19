@@ -118,6 +118,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4455606225563886, guid: d812663e9199d7543927c13a6955fffb,
     type: 2}
   m_PrefabInternal: {fileID: 1834747119}
+--- !u!95 &973677104 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95051344234981452, guid: d812663e9199d7543927c13a6955fffb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1834747119}
 --- !u!1 &998703111
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +285,16 @@ Prefab:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114743385203207872, guid: d812663e9199d7543927c13a6955fffb,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 973677104}
+    - target: {fileID: 114744615600349482, guid: d812663e9199d7543927c13a6955fffb,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 973677104}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d812663e9199d7543927c13a6955fffb, type: 2}
   m_IsPrefabParent: 0
