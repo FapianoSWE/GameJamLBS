@@ -640,6 +640,7 @@ MonoBehaviour:
   teleportRange: 5
   rb: {fileID: 0}
   raydistance: 1.21
+<<<<<<< HEAD
 --- !u!212 &212062965181911810
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1344,3 +1345,5 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+=======
+>>>>>>> d51a32bbdda132646e46c35099fa76a294e4bd5a
