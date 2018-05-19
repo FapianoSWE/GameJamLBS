@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &225699928
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527188592843588, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &377774420 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1614288982989070, guid: a90f75e000ad7fc429b3b3d63565e66e,
@@ -238,7 +280,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4455606225563886, guid: d812663e9199d7543927c13a6955fffb, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 61049684198643586, guid: d812663e9199d7543927c13a6955fffb,
         type: 2}
