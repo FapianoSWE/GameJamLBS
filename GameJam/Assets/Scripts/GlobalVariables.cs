@@ -4,5 +4,5 @@ using UnityEngine;
 
 
 public class GlobalVariables : MonoBehaviour {
-
+    public GameObject coins;
 }

@@ -26,10 +26,14 @@ public class EnemyBehaviourScript : MonoBehaviour {
     Rigidbody2D rb;
     GameObject player;
 
+
+    GameObject coin;
+
 	void Start () {
         patrolTarget = patrol1;
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        coin = GameObject.Find("Main GameEntity").GetComponent<GlobalVariables>().coins;
 	}
 	
 	// Update is called once per frame
@@ -82,6 +86,7 @@ public class EnemyBehaviourScript : MonoBehaviour {
         {
             GameObject part = Instantiate(deathParticle, transform.position, Quaternion.identity);
             Destroy(part, 5);
+            GameObject temp = Instantiate(coin, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject,0);
         }
     }      
