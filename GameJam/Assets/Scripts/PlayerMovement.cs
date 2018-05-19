@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     //Physics
     public Rigidbody2D rb;
     BoxCollider2D collider;
-    float raydistance;
+    public float raydistance;
     
     //Teleport Variables
     Vector2 currentVelocity;
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 isGrounded = true;
             }
-            print(Input.GetAxis("Vertical"));
+            //print(Input.GetAxis("Vertical"));
             if (isGrounded && Input.GetAxis("Vertical") <= -0.8f)
             {
                 print(hit[i].transform.gameObject.GetComponent<PlatformEffector2D>());
