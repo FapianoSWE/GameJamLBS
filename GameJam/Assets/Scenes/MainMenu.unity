@@ -129,10 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d05b47430d12934b81607bafbc68099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 549472940}
-  - {fileID: 1976057281}
-  - {fileID: 1551593453}
 --- !u!1 &127456803
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +901,7 @@ GameObject:
   - component: {fileID: 1551593456}
   - component: {fileID: 1551593455}
   m_Layer: 5
-  m_Name: Exit Game Button
+  m_Name: Exit Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 549472940}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1752776258
