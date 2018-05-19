@@ -54,7 +54,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.21956097, g: 0.22281992, b: 0.22794116, a: 0}
+  m_BackGroundColor: {r: 0.08627451, g: 0.078431375, b: 0.078431375, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -101,7 +101,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -210,7 +210,9 @@ MonoBehaviour:
   - {fileID: 1643231743430412, guid: 99ccf1e1088e5e345a8d9aa4eaf7018b, type: 2}
   - {fileID: 1354946099896852, guid: dae4eca1395844d49a0403e451678844, type: 2}
   - {fileID: 1562053580414696, guid: fa1426e4196e51c4f80a3055b1d9d131, type: 2}
+  - {fileID: 1454066376965454, guid: 8b05afe9af58c8d4397c07ddcd2d3b2b, type: 2}
   - {fileID: 1288253962117214, guid: c594a14ab7adeae4eaed0921d966d702, type: 2}
+  - {fileID: 1766614124737424, guid: e5c4fac8269632048968e0e192d9172b, type: 2}
   levelLength: 10
 --- !u!124 &124521746726740728
 Behaviour:

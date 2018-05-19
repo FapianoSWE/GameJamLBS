@@ -17,7 +17,14 @@ public class LevelGenerationScript : MonoBehaviour {
             while (room == lastRoom)
             {
                 room = Random.Range(0, LevelModules.Count);
-            }        
+            }       
+            if (room == 3|| room == 4 || room == 5)
+            {
+                if (lastRoom == 3 || lastRoom == 4 || lastRoom == 5)
+                {
+                    room = Random.Range(0, 2);
+                }
+            } 
             GameObject Room = Instantiate(LevelModules[room], new Vector2(18*i,0), Quaternion.identity);
             Room.transform.SetParent(map.transform);
             lastRoom = room;
