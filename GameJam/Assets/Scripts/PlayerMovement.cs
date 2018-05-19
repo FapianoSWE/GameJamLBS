@@ -10,10 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool isGrounded;
     public Vector2 moveDirection;
     public float teleportRange;
-    int directionMultiplier = 1;
 
-    //animation
-    public Animator anim;
     //Physics
     public Rigidbody2D rb;
     BoxCollider2D collider;
@@ -44,7 +41,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.velocity = new Vector2(rb.velocity.x, maxUpVelocity);
         }
-        gameObject.transform.localScale = new Vector3(directionMultiplier, 1, 1);
 
         if (Input.GetAxis("LeftTrigger") == 1 && cooldown <= 0)
         {
@@ -66,10 +62,9 @@ public class PlayerMovement : MonoBehaviour {
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        anim.SetFloat("HorizontalInput",horizontal);
+
         if(horizontal < 0)
         {
-            directionMultiplier = -1;
             if (rb.velocity.x > -maxSpeed)
             {
                 rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
@@ -78,7 +73,6 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (horizontal > 0)
         {
-            directionMultiplier = 1;
             if (rb.velocity.x < maxSpeed)
             {
                 rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
