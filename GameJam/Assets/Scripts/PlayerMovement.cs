@@ -20,10 +20,10 @@ public class PlayerMovement : MonoBehaviour {
     Vector2 currentVelocity;
     float cooldown;
 
+    public Animator anim;
 
 	void Start ()
     {
-
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
 	}
@@ -62,19 +62,24 @@ public class PlayerMovement : MonoBehaviour {
     void Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
+        anim.SetFloat("HorizontalInput",horizontal);
 
         if(horizontal < 0)
         {
+            rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
             if (rb.velocity.x > -maxSpeed)
             {
-                rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
+                transform.localScale = new Vector3(-1,1,1);
+              
             }
           
         }
         else if (horizontal > 0)
         {
+            transform.localScale = new Vector3(1, 1, 1);
             if (rb.velocity.x < maxSpeed)
             {
+                
                 rb.velocity += new Vector2(horizontal * speed * Time.deltaTime, 0);
             }
         }
@@ -114,7 +119,7 @@ public class PlayerMovement : MonoBehaviour {
                 {
                     isGrounded = true;
                 }
-                if (isGrounded && Input.GetAxis("Vertical") <= -1f)
+                if (isGrounded && Input.GetAxis("Vertical") <= -0.8f)
                 {
                     print(hit[i].transform.gameObject.GetComponent<PlatformEffector2D>());
                     if (hit[i].transform.gameObject.GetComponent<PlatformEffector2D>() != null)
