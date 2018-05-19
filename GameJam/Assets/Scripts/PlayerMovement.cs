@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour {
                 {
                     isGrounded = true;
                 }
-                if (isGrounded && Input.GetAxis("Vertical") <= -0.8f)
+                if (isGrounded && Input.GetAxis("Vertical") <= -1f)
                 {
                     print(hit[i].transform.gameObject.GetComponent<PlatformEffector2D>());
                     if (hit[i].transform.gameObject.GetComponent<PlatformEffector2D>() != null)

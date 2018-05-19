@@ -186,9 +186,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d144d15b2cf449aba510c683cd3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2000
-  jumpForce: 500
+  speed: 20
+  maxSpeed: 8
+  jumpForce: 0.45
+  lowJumpMultiplier: 20
+  fallMultiplier: 20
+  maxUpVelocity: 9
   isGrounded: 0
   moveDirection: {x: 0, y: 0}
   teleportRange: 5
   rb: {fileID: 0}
+  raydistance: 1.21
